@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home/screens/discover_screen.dart';
 import 'package:home/screens/welcome_screen.dart';
 
 void main() {
@@ -11,7 +12,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const WelcomeScreen(),
+      //home: const WelcomeScreen(),
+      home: const DiscoverScreen(),
     );
   }
 }
