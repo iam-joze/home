@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/property.dart';
 import '../widgets/listing_card.dart';
+import '../screens/details_screen.dart';
 
 class DiscoverScreen extends StatefulWidget {
   const DiscoverScreen({super.key});
@@ -53,7 +54,15 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
           Expanded(
             child: ListView.builder(
               itemCount: filtered.length,
-              itemBuilder: (context, index) => ListingCard(property: filtered[index]),
+              itemBuilder: (context, index) => ListingCard(
+                property: filtered[index],
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DetailsScreen(property: filtered[index])),
+                  );
+                },
+              ),
             ),
           ),
         ],
