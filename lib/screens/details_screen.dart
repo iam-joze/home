@@ -1,6 +1,8 @@
 //import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../models/property.dart';
+import '../state/saved_properties.dart';
 import '../widgets/glass_container.dart';
 
 class DetailsScreen extends StatelessWidget {
@@ -21,7 +23,7 @@ class DetailsScreen extends StatelessWidget {
           ),*/
           // Hero image with gradient
           Container(
-            //height: 820,
+            //height: 820,create
             width: double.infinity,
             decoration: BoxDecoration(
               color: Colors.blue[200],
@@ -57,10 +59,22 @@ class DetailsScreen extends StatelessWidget {
                       child: Icon(Icons.share, color: Colors.white, size: 20),
                     ),
                     const SizedBox(width: 8),
-                    const GlassContainer(
-                      borderRadius: 24,
-                      padding: EdgeInsets.all(10),
-                      child: Icon(Icons.favorite_border, color: Colors.white, size: 20),
+                    Consumer<SavedProperties>(
+                      builder: (context, savedProperties, child) {
+                        final isSaved = savedProperties.isSaved(property);
+                        return GestureDetector(
+                          onTap: () => savedProperties.toggle(property),
+                          child: GlassContainer(
+                            borderRadius: 24,
+                            padding: const EdgeInsets.all(10),
+                            child: Icon(
+                              isSaved ? Icons.favorite : Icons.favorite_border,
+                              color: isSaved ? Colors.redAccent : Colors.white,
+                              size: 20,
+                            ),
+                          ),
+                        );
+                      },
                     ),
                   ],
                 ),
