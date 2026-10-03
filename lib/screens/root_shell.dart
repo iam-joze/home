@@ -3,7 +3,6 @@ import 'package:home/screens/saved_screen.dart';
 import 'discover_screen.dart';
 import '../widgets/glass_container.dart';
 import '../theme/app_colors.dart';
-import 'package:home/screens/saved_screen.dart';
 
 class RootShell extends StatefulWidget {
   const RootShell({super.key});

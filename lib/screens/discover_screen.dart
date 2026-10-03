@@ -16,9 +16,9 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
   final List<String> types = ["All", "Apartment", "Airbnb", "Rent", "Permanent"];
 
   final List<Property> properties = const [
-    Property(id: "1", title: "2 Bedroom Apartment", location: "Kampala", price: 800000, type: "Apartment", beds: 2, baths: 1, sqft: 850),
-    Property(id: "2", title: "Studio Airbnb", location: "Ntinda", price: 450000, type: "Airbnb", beds: 1, baths: 1, sqft: 400),
-    Property(id: "3", title: "3 Bedroom House", location: "Muyenga", price: 1500000, type: "Permanent", beds: 3, baths: 2, sqft: 1200),
+    Property(id: "1", title: "2 Bedroom Apartment", location: "Kampala", price: 800000, type: "Apartment", beds: 2, baths: 1, sqft: 850, imageUrl: 'assets/images/hero_image.jpg'),
+    Property(id: "2", title: "Studio Airbnb", location: "Ntinda", price: 450000, type: "Airbnb", beds: 1, baths: 1, sqft: 400, imageUrl: 'assets/images/hero_image.jpg'),
+    Property(id: "3", title: "3 Bedroom House", location: "Muyenga", price: 1500000, type: "Permanent", beds: 3, baths: 2, sqft: 1200, imageUrl: 'assets/images/hero_image.jpg'),
   ];
 
   @override

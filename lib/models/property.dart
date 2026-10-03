@@ -7,6 +7,7 @@ class Property {
   final int beds;
   final int baths;
   final int sqft;
+  final String imageUrl;
 
   const Property({
     required this.id,
@@ -17,5 +18,6 @@ class Property {
     required this.beds,
     required this.baths,
     required this.sqft,
+    required this.imageUrl,
   });
 }
