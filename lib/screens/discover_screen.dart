@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home/theme/app_colors.dart';
 import '../models/property.dart';
 import '../widgets/listing_card.dart';
 import '../screens/details_screen.dart';
@@ -28,6 +29,7 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
         : properties.where((p) => p.type == selectedType).toList();
 
     return Scaffold(
+      backgroundColor: AppColors.screenBackground,
       appBar: AppBar(title: const Text("Discover")),
       body: Column(
         children: [
