@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:home/screens/discover_screen.dart';
 import 'package:home/screens/welcome_screen.dart';
+import 'package:home/screens/root_shell.dart';
+import 'state/saved_properties.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => SavedProperties(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -11,7 +20,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const WelcomeScreen(),
+      //home: const WelcomeScreen(),
+      //home: const DiscoverScreen(),
+      home: const RootShell(),
     );
   }
 }
