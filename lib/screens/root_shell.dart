@@ -75,7 +75,7 @@ class _NavIcon extends StatelessWidget {
           shape: BoxShape.circle,
           color: isSelected ? AppColors.primaryBlue : Colors.transparent,
         ),
-        child: Icon(icon, color: Colors.white, size: 24),
+        child: Icon(icon, color: isSelected ? Colors.white : Colors.black54, size: 24),
       ),
     );
   }

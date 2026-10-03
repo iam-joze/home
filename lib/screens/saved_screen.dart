@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home/theme/app_colors.dart';
 import 'package:provider/provider.dart';
 import '../state/saved_properties.dart';
 import '../widgets/listing_card.dart';
@@ -13,6 +14,7 @@ class SavedScreen extends StatelessWidget {
     final saved = savedProperties.saved;
 
     return Scaffold(
+      backgroundColor: AppColors.screenBackground,
       appBar: AppBar(title: const Text("Saved")),
       body: saved.isEmpty
           ? const Center(
