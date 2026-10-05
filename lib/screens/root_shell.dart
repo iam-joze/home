@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home/screens/profile_screen.dart';
 import 'package:home/screens/saved_screen.dart';
 import 'discover_screen.dart';
 import '../widgets/glass_container.dart';
@@ -17,7 +18,7 @@ class _RootShellState extends State<RootShell> {
   final List<Widget> screens = const [
     DiscoverScreen(),
     SavedScreen(),
-    Center(child: Text("Profile (coming soon)")),
+    ProfileScreen(),
   ];
 
   final List<IconData> icons = const [
